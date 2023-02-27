@@ -1,5 +1,7 @@
 library update_informer;
 
+export 'package:update_informer/update_informer.dart';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
