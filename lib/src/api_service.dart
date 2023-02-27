@@ -1,10 +1,4 @@
-import 'dart:convert';
-import 'dart:io';
-
-import 'package:dio/dio.dart';
-import 'package:flutter/foundation.dart';
-import 'package:package_info_plus/package_info_plus.dart';
-import 'package:update_informer/src/app_store_model/app_store_model.dart';
+part of update_informer;
 
 class ApiService {
   final Dio _dio = Dio();
