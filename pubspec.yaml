@@ -1,8 +1,8 @@
 name: update_informer
 description: A new Flutter package project.
 version: 0.0.1
-homepage: https://github.com/10urbulut/
-repository: https://github.com/10urbulut/update_informer/
+homepage: https://github.com/10urbulut/update_informer
+
 
 environment:
   sdk: '>=2.19.2 <3.0.0'
