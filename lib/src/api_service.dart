@@ -8,8 +8,8 @@ class ApiService {
         .post("https://itunes.apple.com/lookup?bundleId=$iosBundleId");
 
     if (response.statusCode == HttpStatus.ok) {
-      appStoreModel = await compute(
-          AppStoreModel.fromJson, jsonDecode(response.data)! as JsonType);
+      appStoreModel =
+          AppStoreModel.fromJson(jsonDecode(response.data)! as JsonType);
     }
     debugPrint(
         "AppStore version number: ${appStoreModel?.results?.first.version}");
