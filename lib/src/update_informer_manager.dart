@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:store_redirect/store_redirect.dart';
-
-import 'api_service.dart';
+part of update_informer;
 
 class UpdateInformerManager extends ChangeNotifier {
   UpdateInformerManager(String iosBundleId) {
