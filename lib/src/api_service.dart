@@ -7,9 +7,10 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'package:update_informer/src/app_store_model/app_store_model.dart';
 
 class ApiService {
+  final Dio _dio = Dio();
   Future<bool> checkAppstoreVersion(String iosBundleId) async {
     AppStoreModel? appStoreModel;
-    Response response = await Dio()
+    Response response = await _dio
         .post("https://itunes.apple.com/lookup?bundleId=$iosBundleId");
 
     if (response.statusCode == HttpStatus.ok) {
