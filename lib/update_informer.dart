@@ -1,3 +1,3 @@
 library update_informer;
 
-export 'update_informer.dart';
+export '/src/update_informer.dart';
