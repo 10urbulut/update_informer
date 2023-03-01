@@ -1,4 +1,7 @@
-part of update_informer;
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../update_informer.dart';
 
 class UpdateInformerWidget extends StatelessWidget {
   const UpdateInformerWidget({

@@ -1,4 +1,12 @@
-part of update_informer;
+
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
+import 'package:package_info_plus/package_info_plus.dart';
+
+import '../update_informer.dart';
 
 class ApiService {
   final Dio _dio = Dio();
