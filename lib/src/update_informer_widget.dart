@@ -26,7 +26,7 @@ class UpdateInformerWidget extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) => UpdateInformerManager(iosAppBundle),
       builder: (context, _) => Visibility(
-        visible: context.watch<UpdateInformerManager>().versionIsUpToDate,
+        visible: !context.watch<UpdateInformerManager>().versionIsUpToDate,
         child: InkWell(
           onTap: () => context.read<UpdateInformerManager>().upToDateOnTap(
               iosAppBundle: iosAppBundle,
