@@ -1,6 +1,6 @@
 name: update_informer
 description: A new Flutter package project.
-version: 0.0.1
+version: 0.0.1+2
 homepage: https://github.com/10urbulut/update_informer
 
 
@@ -26,6 +26,3 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   build_runner: ^2.3.3
   json_serializable: ^6.6.1
-
-
-flutter:
