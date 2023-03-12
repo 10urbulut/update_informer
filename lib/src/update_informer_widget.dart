@@ -31,8 +31,8 @@ class UpdateInformerWidget extends StatelessWidget {
               iosAppId: iosAppId),
           child: Container(
             decoration: BoxDecoration(
+                color: backgroundColor ?? Colors.amber.shade700,
                 borderRadius: BorderRadius.circular(radius ?? 15)),
-            color: backgroundColor ?? Colors.amber.shade700,
             padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
             child: Row(
               children: [
