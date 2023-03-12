@@ -33,7 +33,7 @@ class UpdateInformerWidget extends StatelessWidget {
               androidAppBundle: androidAppBundle,
               iosAppId: iosAppId),
           child: Container(
-            margin: const EdgeInsets.symmetric(horizontal: 20),
+            margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             decoration: BoxDecoration(
                 color: backgroundColor ?? Colors.amber.shade700,
                 borderRadius: BorderRadius.circular(radius ?? 15)),
