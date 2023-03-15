@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:store_redirect/store_redirect.dart';
 
@@ -13,7 +12,7 @@ class UpdateInformerManager extends ChangeNotifier {
     debugPrint("Init wroked");
   }
 
-  bool _versionIsUpToDate = false;
+  bool _versionIsUpToDate = true;
   final ApiService _apiService = ApiService();
 
   Future<void> upToDateOnTap({
