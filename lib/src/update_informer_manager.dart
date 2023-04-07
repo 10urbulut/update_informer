@@ -9,7 +9,7 @@ class UpdateInformerManager extends ChangeNotifier {
   }
   void initialize(iosBundleId) async {
     await checkAppversion(iosBundleId);
-    debugPrint("Init wroked");
+    debugPrint("Init worked");
   }
 
   bool _versionIsUpToDate = true;

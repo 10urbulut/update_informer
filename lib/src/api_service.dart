@@ -1,4 +1,3 @@
-
 import 'dart:convert';
 import 'dart:io';
 
@@ -10,6 +9,7 @@ import '../update_informer.dart';
 
 class ApiService {
   final Dio _dio = Dio();
+  PackageInfo? _packageInfo;
   Future<bool> checkAppstoreVersion(String iosBundleId) async {
     AppStoreModel? appStoreModel;
     Response response = await _dio
@@ -21,17 +21,19 @@ class ApiService {
     }
     debugPrint(
         "AppStore version number: ${appStoreModel?.results?.first.version}");
-    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    _packageInfo = await PackageInfo.fromPlatform();
 
-    debugPrint("In app version number: ${packageInfo.version}");
+    debugPrint("In app version number: ${_packageInfo?.version}");
     debugPrint("Version eşit mi değil mi");
 
-    if (packageInfo.version == appStoreModel?.results?.first.version) {
+    if (_packageInfo?.version == appStoreModel?.results?.first.version) {
       debugPrint("Eşit");
       return true;
-    } else {
-      debugPrint("Eşit değil");
-      return false;
     }
+
+    debugPrint("Eşit değil");
+    return false;
   }
+
+  String? get packageVersion => _packageInfo?.version;
 }
