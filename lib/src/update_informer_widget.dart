@@ -35,8 +35,9 @@ class UpdateInformerWidget extends StatelessWidget {
           child: Container(
             margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             decoration: BoxDecoration(
-                color: backgroundColor ?? Colors.amber.shade700,
-                borderRadius: BorderRadius.circular(radius ?? 15)),
+              color: backgroundColor ?? Colors.amber.shade700,
+              borderRadius: BorderRadius.circular(radius ?? 15),
+            ),
             padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,

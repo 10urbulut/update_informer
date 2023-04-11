@@ -30,8 +30,10 @@ class UpdateInformerManager extends ChangeNotifier {
 
   Future<void> checkAppversion(String iosBundleId) async {
     _versionIsUpToDate = await _apiService.checkAppstoreVersion(iosBundleId);
-    await Future.delayed(const Duration(seconds: 8));
-    notifyListeners();
+
+    if (!_versionIsUpToDate) {
+      notifyListeners();
+    }
   }
 
   bool get versionIsUpToDate => _versionIsUpToDate;
