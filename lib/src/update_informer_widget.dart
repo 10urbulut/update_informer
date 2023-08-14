@@ -12,6 +12,7 @@ class UpdateInformerWidget extends StatelessWidget {
     this.backgroundColor,
     this.informationText,
     this.radius,
+    this.debugTrue = true,
   }) : super(key: key);
 
   final String androidAppBundle;
@@ -20,6 +21,7 @@ class UpdateInformerWidget extends StatelessWidget {
   final String? informationText;
   final Color? backgroundColor;
   final double? radius;
+  final bool debugTrue;
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +31,11 @@ class UpdateInformerWidget extends StatelessWidget {
         visible: !context.watch<UpdateInformerManager>().versionIsUpToDate,
         child: InkWell(
           onTap: () => context.read<UpdateInformerManager>().upToDateOnTap(
-              iosAppBundle: iosAppBundle,
-              androidAppBundle: androidAppBundle,
-              iosAppId: iosAppId),
+                iosAppBundle: iosAppBundle,
+                androidAppBundle: androidAppBundle,
+                iosAppId: iosAppId,
+                debugTrue: debugTrue,
+              ),
           child: Container(
             margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             decoration: BoxDecoration(

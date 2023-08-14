@@ -19,17 +19,20 @@ class UpdateInformerManager extends ChangeNotifier {
     required String iosAppBundle,
     required String androidAppBundle,
     required String iosAppId,
+    bool debugTrue = true,
   }) async {
     await StoreRedirect.redirect(
       androidAppId: androidAppBundle,
       iOSAppId: iosAppId,
     );
 
-    await checkAppversion(iosAppBundle);
+    await checkAppversion(iosAppBundle, debugTrue: debugTrue);
   }
 
-  Future<void> checkAppversion(String iosBundleId) async {
-    _versionIsUpToDate = await _apiService.checkAppstoreVersion(iosBundleId);
+  Future<void> checkAppversion(String iosBundleId,
+      {bool debugTrue = true}) async {
+    _versionIsUpToDate = await _apiService.checkAppstoreVersion(iosBundleId,
+        debugTrue: debugTrue);
 
     if (!_versionIsUpToDate) {
       notifyListeners();
