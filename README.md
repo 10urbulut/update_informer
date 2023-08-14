@@ -16,12 +16,12 @@ and the Flutter guide for
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+
+<img src="https://github.com/10urbulut/update_informer/assets/77685360/7b41c754-33a5-49ff-b0d4-bc9f2524c41e" alt="drawing" width="300"/>
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Need app information requires in store checking
 
 ## Usage
 
