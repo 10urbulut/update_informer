@@ -20,10 +20,7 @@ class ApiService {
       appStoreModel =
           AppStoreModel.fromJson(jsonDecode(response.data)! as JsonType);
     }
-    if (debugTrue) {
-      debugPrint(
-          "AppStore version number: ${appStoreModel?.results?.first.version}");
-    }
+
     _packageInfo = await PackageInfo.fromPlatform();
 
     if (debugTrue) {
@@ -33,8 +30,11 @@ class ApiService {
 
     if (appStoreModel == null) return false;
     if (appStoreModel.results == null) return false;
-    if (appStoreModel.results!.isNotEmpty) return false;
-
+    if (appStoreModel.results!.isEmpty) return false;
+    if (debugTrue) {
+      debugPrint(
+          "AppStore version number: ${appStoreModel.results?.first.version}");
+    }
     if (_packageInfo?.version == appStoreModel.results?.first.version) {
       if (debugTrue) debugPrint("Eşit");
       return true;

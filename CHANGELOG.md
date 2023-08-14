@@ -1,3 +1,3 @@
-## 1.0.0
+# 1.0.0
 
-* TODO: Describe initial release.
+* Easy use store update information with appstore based
