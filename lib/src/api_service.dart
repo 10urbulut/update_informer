@@ -28,9 +28,19 @@ class ApiService {
     }
     if (debugTrue) debugPrint("Version eşit mi değil mi");
 
-    if (appStoreModel == null) return false;
-    if (appStoreModel.results == null) return false;
-    if (appStoreModel.results!.isEmpty) return false;
+    if (appStoreModel == null) {
+      if (debugTrue) debugPrint("appStoreModel null");
+      return true;
+    }
+    if (appStoreModel.results == null) {
+      if (debugTrue) debugPrint("results null");
+
+      return true;
+    }
+    if (appStoreModel.results!.isEmpty) {
+      if (debugTrue) debugPrint("results empty");
+      return true;
+    }
     if (debugTrue) {
       debugPrint(
           "AppStore version number: ${appStoreModel.results?.first.version}");
