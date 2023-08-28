@@ -5,3 +5,8 @@
 # 1.0.1
 
 * Add message to debug and bug fix
+
+
+# 1.0.2
+
+* Upgrade packages
