@@ -6,7 +6,6 @@
 
 * Add message to debug and bug fix
 
-
 # 1.0.2
 
 * Upgrade packages
@@ -18,3 +17,7 @@
 # 1.0.4
 
 * Upgrade packages
+  
+# 1.0.5
+
+* Add country code parameter
