@@ -7,8 +7,9 @@ void main() {
     androidAppBundle: "",
     iosAppBundle: "",
     iosAppId: "",
+    countryCode: "",
   );
-  var provider = UpdateInformerManager("");
+  var provider = UpdateInformerManager("", "");
 
   test('Check version', () {
     expect(false, provider.versionIsUpToDate);

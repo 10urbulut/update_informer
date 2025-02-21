@@ -12,6 +12,7 @@ class UpdateInformerWidget extends StatelessWidget {
     this.backgroundColor,
     this.informationText,
     this.radius,
+    required this.countryCode,
     this.debugTrue = true,
   }) : super(key: key);
 
@@ -22,11 +23,12 @@ class UpdateInformerWidget extends StatelessWidget {
   final Color? backgroundColor;
   final double? radius;
   final bool debugTrue;
+  final String countryCode;
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => UpdateInformerManager(iosAppBundle),
+      create: (_) => UpdateInformerManager(iosAppBundle, countryCode),
       builder: (context, _) => Visibility(
         visible: !context.watch<UpdateInformerManager>().versionIsUpToDate,
         child: InkWell(
@@ -35,6 +37,7 @@ class UpdateInformerWidget extends StatelessWidget {
                 androidAppBundle: androidAppBundle,
                 iosAppId: iosAppId,
                 debugTrue: debugTrue,
+                countryCode: countryCode,
               ),
           child: Container(
             margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),

@@ -4,11 +4,11 @@ import 'package:store_redirect/store_redirect.dart';
 import '../update_informer.dart';
 
 class UpdateInformerManager extends ChangeNotifier {
-  UpdateInformerManager(String iosBundleId) {
-    initialize(iosBundleId);
+  UpdateInformerManager(String iosBundleId, String countryCode) {
+    initialize(iosBundleId, countryCode);
   }
-  void initialize(iosBundleId) async {
-    await checkAppversion(iosBundleId);
+  void initialize(String iosBundleId, String countryCode) async {
+    await checkAppversion(iosBundleId, countryCode);
     debugPrint("Init worked");
   }
 
@@ -19,6 +19,7 @@ class UpdateInformerManager extends ChangeNotifier {
     required String iosAppBundle,
     required String androidAppBundle,
     required String iosAppId,
+    required String countryCode,
     bool debugTrue = true,
   }) async {
     await StoreRedirect.redirect(
@@ -26,13 +27,13 @@ class UpdateInformerManager extends ChangeNotifier {
       iOSAppId: iosAppId,
     );
 
-    await checkAppversion(iosAppBundle, debugTrue: debugTrue);
+    await checkAppversion(iosAppBundle, countryCode, debugTrue: debugTrue);
   }
 
-  Future<void> checkAppversion(String iosBundleId,
+  Future<void> checkAppversion(String iosBundleId, String countryCode,
       {bool debugTrue = true}) async {
-    _versionIsUpToDate = await _apiService.checkAppstoreVersion(iosBundleId,
-        debugTrue: debugTrue);
+    _versionIsUpToDate = await _apiService
+        .checkAppstoreVersion(iosBundleId, countryCode, debugTrue: debugTrue);
 
     if (!_versionIsUpToDate) {
       notifyListeners();

@@ -18,9 +18,11 @@ class MyApp extends StatelessWidget {
         body: const Stack(
           children: [
             UpdateInformerWidget(
-                androidAppBundle: "your android app bundle here",
-                iosAppBundle: "your ios app bundle here",
-                iosAppId: "your app id here"),
+              androidAppBundle: "your android app bundle here",
+              iosAppBundle: "your ios app bundle here",
+              iosAppId: "your app id here",
+              countryCode: "your country code here",
+            ),
             Center(
               child: Text('Hello World. Is my app up to date?'),
             ),
