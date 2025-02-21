@@ -14,3 +14,7 @@
 # 1.0.3
 
 * Upgrade packages
+  
+# 1.0.4
+
+* Upgrade packages
