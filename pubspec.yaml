@@ -1,6 +1,6 @@
 name: update_informer
 description: Updating for informally.
-version: 1.0.4
+version: 1.0.5
 homepage: https://github.com/10urbulut/update_informer
 
 
@@ -14,9 +14,9 @@ dependencies:
     sdk: flutter
 
   json_annotation: ^4.9.0
-  package_info_plus: ^8.0.2
   provider: ^6.1.2
-  store_redirect: ^2.0.2
+  package_info_plus: ^8.2.1
+  store_redirect: ^2.0.4
 
 
 
