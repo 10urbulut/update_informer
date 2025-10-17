@@ -5,7 +5,7 @@ import '../update_informer.dart';
 
 class UpdateInformerWidget extends StatelessWidget {
   const UpdateInformerWidget({
-    Key? key,
+    super.key,
     required this.androidAppBundle,
     required this.iosAppBundle,
     required this.iosAppId,
@@ -14,7 +14,7 @@ class UpdateInformerWidget extends StatelessWidget {
     this.radius,
     required this.countryCode,
     this.debugTrue = true,
-  }) : super(key: key);
+  });
 
   final String androidAppBundle;
   final String iosAppId;

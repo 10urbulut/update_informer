@@ -10,6 +10,7 @@ import '../update_informer.dart';
 class ApiService {
   final Dio _dio = Dio();
   PackageInfo? _packageInfo;
+
   Future<bool> checkAppstoreVersion(String iosBundleId, String countryCode,
       {bool debugTrue = true}) async {
     try {

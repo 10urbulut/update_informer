@@ -21,3 +21,7 @@
 # 1.0.5
 
 * Add country code parameter
+
+# 1.0.6
+
+* Upgrade packages

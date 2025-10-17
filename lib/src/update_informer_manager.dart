@@ -7,7 +7,7 @@ class UpdateInformerManager extends ChangeNotifier {
   UpdateInformerManager(String iosBundleId, String countryCode) {
     initialize(iosBundleId, countryCode);
   }
-  void initialize(String iosBundleId, String countryCode) async {
+  Future<void> initialize(String iosBundleId, String countryCode) async {
     await checkAppversion(iosBundleId, countryCode);
     debugPrint("Init worked");
   }
@@ -35,9 +35,7 @@ class UpdateInformerManager extends ChangeNotifier {
     _versionIsUpToDate = await _apiService
         .checkAppstoreVersion(iosBundleId, countryCode, debugTrue: debugTrue);
 
-    if (!_versionIsUpToDate) {
-      notifyListeners();
-    }
+    notifyListeners();
   }
 
   bool get versionIsUpToDate => _versionIsUpToDate;
