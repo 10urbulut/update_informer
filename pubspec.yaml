@@ -1,32 +1,28 @@
 name: update_informer
 description: Updating for informally.
-version: 1.0.6
+version: 1.0.7
 homepage: https://github.com/10urbulut/update_informer
 
-
 environment:
-  sdk: '>=3.0.5 <4.0.0'
+  sdk: ">=3.0.5 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
-  dio: ^5.9.0
+  dio: ^5.9.2
   flutter:
     sdk: flutter
 
-  json_annotation: ^4.9.0
+  json_annotation: ^4.12.0
   provider: ^6.1.5+1
-  package_info_plus: ^9.0.0
+  package_info_plus: ^10.1.0
   store_redirect: ^2.0.4
-
-
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
-  build_runner: ^2.9.0
-  json_serializable: ^6.11.1
-
+  build_runner: ^2.15.0
+  json_serializable: ^6.14.0
 
   # dart pub publish --dry-run
   # do version upgrade
